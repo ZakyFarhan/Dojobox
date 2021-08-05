@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Test</title>
+</head>
+<body>
+    <script>
+        //Soal B
+        arrayBarang = ["Monitor", "Keyboard", "CPU", "Mouse", "Modem"];
+
+        let namaBarang = prompt("Masukan Nama Barang = ");
+        let harga = parseInt(prompt("Masukan Harga Barang = "));
+        let jumlah = parseInt(prompt("Masukan Jumlah Barang = "));
+        let discount = parseInt(prompt("Masukan Nilai Discount = "));
+
+        function hitungDiscount() {
+            potonganDiscount = (harga * discount) / 100
+
+            hasilDiscount = harga - potonganDiscount;
+
+            return hasilDiscount;
+        }
+
+        function total() {
+            total = jumlah * hitungDiscount();
+
+            return total;
+        }
+
+        function outputBarang() {
+
+            document.writeln(`Nama Barang : ${namaBarang} <br>`);
+            document.writeln(`Harga Perbarang : ${harga} <br>`);
+            document.writeln(`Jumlah Barang : ${jumlah} <br>`);
+            document.writeln(`Discount : ${discount}% = ${hitungDiscount()} <br>`);
+            document.writeln(`Total : ${total()} <br>`);
+        }
+
+        outputBarang();
+    </script>
+</body>
+</html>
